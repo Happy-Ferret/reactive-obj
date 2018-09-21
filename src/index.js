@@ -19,9 +19,9 @@ function ReactiveObject(baseObject = {}) {
       writeListners[randomKey] = func
       return randomKey
     },
-    removeSubscriber: subscriberID => {
-      if (!delete readListners[subscriberID]) {
-        return delete writeListners[subscriberID]
+    removeListner: listnerID => {
+      if (!delete readListners[listnerID]) {
+        return delete writeListners[listnerID]
       } else {
         return true
       }
